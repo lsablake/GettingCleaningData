@@ -1,7 +1,6 @@
-
+#run_analysis.R
 #---------------------------------------------------------------------------------------------------
 #1. Download and extract raw datasets from source (unnecessary to repeat if datasets are unchanged).
-
 
 if(!file.exists("./data")) {
   dir.create("./data")}
