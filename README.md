@@ -8,7 +8,7 @@
 * 'README.md'      : Explanation of project requirements, and data transformations to achieve tidy data requirements.
 * 'Codebook.md'    : Explanation of the variables and values in the output tidy dataset.
 * 'run_analysis.R' : R code used to transform source files to tidy data.
-* 'SummaryMean.txt': A test file of the final dataset.
+* 'SummaryMean.txt': A text file of the final dataset.
 
 ==================================================================
 ### Project Requirements
