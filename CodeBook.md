@@ -128,7 +128,7 @@
 ### [05] Additional vectors obtained by averaging the mean signals in a signal window sample. These are used on the angle() variable.
 
 		 * Variables are normalized and bounded within [-1,1].
-		 * Angle() : Angle between to vectors
+		 * Angle() : Angle between two vectors
 		 * Mean    : Mean value
 		 * XYZ     : used to denote triaxial signals in the X, Y and Z directions
 
