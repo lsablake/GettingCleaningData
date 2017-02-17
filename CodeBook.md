@@ -24,8 +24,8 @@
 
 ### [03] Average Means and Average Standard Deviations for Accelerometer and Gyroscope sensor signal variables in the Time domain
 		 
-		 * The Accelerometer signal variables, measuring total linear acceleration, are broken down by triaxial, body motion, and gravitational
-		   force components.
+		 * The Accelerometer signal variables, measuring total linear acceleration, are broken down by triaxial, body 
+		    motion, and gravitational force components.
 		 * The Gyroscope signal variables, measuring angular velocity, are broken down by triaxial and body motion components.
 		 * Triaxial Jerk signals are measured using body linear acceleration and angular velocity derived in time.
 		 * The Magnitude of triaxial signals is measured using Euclidean norm.
@@ -78,7 +78,8 @@
 
 ### [04] Average Means and Average Standard Deviations for Accelerometer and Gyroscope tri-axial signals in the Frequency Domain
 
-		 * Frequency domain signals were produced by applying a Fast Fourier Transform (FFT) to body motion component measures
+		 * Frequency domain signals were produced by applying a Fast Fourier Transform (FFT) to body motion component
+		   measures
 		 * Variables are normalized and bounded within [-1,1].
 		 * Mean    : Mean value
 		 * MeanFreq: mean frequency obtained from the Weighted average of the frequency components.
