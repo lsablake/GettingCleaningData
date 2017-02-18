@@ -2,7 +2,7 @@
 ==================================================================
 ### Getting And Cleaning Data Course Project
 ### Coursera/John Hopkins University
-### Completed by Logan Blake, Feb 2017
+### Completed by L Blake, Feb 2017
 ==================================================================
 #### The project includes the following files:
 * 'README.md'      : Explanation of project requirements, and data transformations to achieve tidy data requirements.
