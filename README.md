@@ -8,7 +8,7 @@
 * 'README.md'      : Explanation of project requirements, and data transformations to achieve tidy data requirements.
 * 'Codebook.md'    : Explanation of the variables and values in the output tidy dataset.
 * 'run_analysis.R' : R code used to transform source files to tidy data.
-* 'SummaryMean.txt': A text file of the final dataset.
+* 'tidydata.txt'   : Output text file containing tidy dataset.
 
 ==================================================================
 #### Project Requirements
@@ -44,17 +44,17 @@ Steps performed in run_analysis.R:
 	 
 6. Extracted the mean and standard deviation measures from the original merged dataset, thereby creating a new dataset called
     MeanDevData. The extracted variables include the "additional variables related to the angle() measures":
-	 * angle(tBodyAccMean,gravity)
-	 * angle(tBodyAccJerkMean),gravityMean)
-	 * angle(tBodyGyroMean,gravityMean)
-	 * angle(tBodyGyroJerkMean,gravityMean)
-	 * angle(X,gravityMean)
-	 * angle(Y,gravityMean)
-	 * angle(Z,gravityMean)
+	* angle(tBodyAccMean,gravity)
+	* angle(tBodyAccJerkMean),gravityMean)
+	* angle(tBodyGyroMean,gravityMean)
+	* angle(tBodyGyroJerkMean,gravityMean)
+	* angle(X,gravityMean)
+	* angle(Y,gravityMean)
+	* angle(Z,gravityMean)
 	 
 	The decision to include these angle() means had two rationales:
-		a. These variable represent unique and distinct measures.
-		b. They are "de minimis" relative to the overall dataset, and can be easily excluded should they be later deemed unnecessary.
+	a. These variable represent unique and distinct measures.
+	b. They are "de minimis" relative to the overall dataset, and can be easily excluded should they be later deemed unnecessary.
 			
 7. Merged "Activity Numbers", represented by y_test/train datasets, and added them to the MeanDevData dataset as a variable. 
 	 This step assigned activity numbers to each observation in the MeanDevData dataset.
@@ -69,24 +69,24 @@ Steps performed in run_analysis.R:
 	 
 11. Reordered the columns of the MeanDevData2 dataset to evaluate more efficiently.
 
-12. Reshaped the MeanDevData2 dataset by melting the dataset to reorder columns and rows, thereby creating a new dataset called 
-	MeanDevMelt.
+12. Melted the MeanDevData2 dataset, creating identifier "Subjects" and "Actvity", thereby creating a new
+    dataset called MeanDevMolt in preparation for casting
 	
-13. Created separate SubjectsMean and ActivityMean datasets from the molten dataset MeanDevMelt. These datasets respectively averaged
-		each variable by Subject and Activity.
+13. Casted the MeanDevMolt dataset by Subject and Activity, creating a final tidy dataset called SummaryData which provides the 
+    average of each feature for each Subject and each Activity.
 		
-14. Merged the SubjectsMean and ActivityMean datasets together to form the final tidy dataset called SummaryMean. The SummaryMean
-		dataset fulfills the requirements of a tidy dataset because:
+14. Create an output file "tidydata.txt for project review. The final dataset fulfills the requirements of a tidy dataset because:
 		
-			* Each Activity and Subject is represented by its own column
+	* Each variable is represented by its own column
 			
-			* Each observational unit is represented in its own row
+	* Each observational unit is represented in its own row
 			
-			* Each type of observational unit forms a table - in this case, there is one type of observational unit,
-				therefore one table.
+	* Each type of observational unit forms a table - in this case, there is one type of observational unit,
+	  therefore one table.
 
 #### Additional Considerations
-1. The decision was deliberately made to leave axial signals (XYZ) alone and not create an additional column called "Axial Signal", which might have made the final dataset "tidier".
+1. The decision was deliberately made to leave axial signals (XYZ) alone and not create an additional column called "Axial Signal",
+   which might have made the final dataset "tidier", but would have also resulted in structural NA values.
 
 ==================================================================
 ### Source Data
