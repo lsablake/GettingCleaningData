@@ -13,6 +13,7 @@
 ==================================================================
 #### Project Requirements
 ==================================================================
+
 The project requires course participants to "demonstrate [the] ability to collect, work with, and clean a data set".
 Requirements: Create one R script called run_analysis.R that does the following:
 
@@ -26,6 +27,7 @@ Requirements: Create one R script called run_analysis.R that does the following:
 ==================================================================
 #### How Project Requirements Were Satisfied
 ==================================================================
+
 Steps performed in run_analysis.R:
 
 1. Performed a "guardian check" to verify/create a local directory to which source files would be downloaded.
